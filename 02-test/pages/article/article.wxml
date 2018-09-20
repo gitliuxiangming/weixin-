@@ -1,0 +1,36 @@
+<view class='container'>
+  <swiper indicator-dots='true' indicator-active-color='#f11' autoplay='true'>
+    <swiper-item>
+      <image src='../../images/swiper/1.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/swiper/2.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/swiper/3.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <view class='article-box' wx:for="{{article}}" wx:key="idx">
+    <view class="article-item" >
+      <view class='article-head'>
+        <image src='/images/avatar/tou像.jpg' class='article-head-avatar'></image>
+        <text  class='article-head-time'>{{item.date}}</text>
+      </view>
+      <text class='article-title'>{{item.title}}</text>
+      <view class='article-body'>
+        <image class='article-body-img' src='{{item.image}}'></image>
+        <text class='article-body-description'>{{item.content}}</text>
+      </view>
+      <view class='article-footer'>
+          <view class='article-footer-item'>
+             <image class='article-footer-pinglun' src='../../images/avatar/pinglun.jpg'></image>
+             <text>{{item.guanzhu}}</text>
+          </view>
+         <view class='article-footer-item'>
+             <image class='article-footer-view' src='../../images/avatar/view.jpg'></image>
+             <text>{{item.view}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

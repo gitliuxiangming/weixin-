@@ -1,0 +1,27 @@
+page{
+   background: #fabd21;
+}
+
+.userinfo{
+   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar{
+  width: 128rpx;
+  height:128rpx;
+  border-radius: 50%;
+}
+.userinfo-name{
+  font-size: 26px;
+}
+.notto{
+  width: 240rpx;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 160px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}

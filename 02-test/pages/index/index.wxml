@@ -1,0 +1,10 @@
+<view class='container'>
+  <view class='userinfo'>
+    <image class='userinfo-avatar' src='/images/avatar/tou像.jpg'></image>
+    <text class='userinfo-name'>lbb</text>
+  </view>
+  <view class='notto' bindtap="tapMotto">
+    <!-- <text class='notto-text' catchtap="taptext">开启之旅</text> -->
+    <text class='notto-text'>开启之旅</text>
+  </view>
+</view>
