@@ -1,0 +1,23 @@
+<template name="articleItem">
+  <view class="article-item" >
+      <view class='article-head'>
+        <image src='{{avatar}}' class='article-head-avatar'></image>
+        <text  class='article-head-time'>{{date}}</text>
+      </view>
+      <text class='article-title'>{{title}}</text>
+      <view class='article-body'>
+        <image class='article-body-img' src='{{image}}'></image>
+        <text class='article-body-description'>{{content}}</text>
+      </view>
+      <view class='article-footer'>
+          <view class='article-footer-item'>
+             <image class='article-footer-pinglun' src='../../images/avatar/pinglun.jpg'></image>
+             <text>{{guanzhu}}</text>
+          </view>
+         <view class='article-footer-item'>
+             <image class='article-footer-view' src='../../images/avatar/view.jpg'></image>
+             <text>{{view}}</text>
+          </view>
+        </view>
+    </view>
+</template>

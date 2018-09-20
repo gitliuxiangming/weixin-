@@ -1,0 +1,19 @@
+  <view>
+  <view class='detail-img-box'>
+    <image class='detail-img-big ' src='{{bankground}}'></image>
+    <image class='detail-img-small' src='{{music}}'></image>
+  </view>
+  <view class='detail-author'>
+    <image class='detail-author-img' src='{{avatar}}'></image>
+    <text class='detail-author-text'>{{author}} 发表于 {{time}}</text>
+  </view>
+  <view class='detail-share'>
+    <image wx:if="{{currentIsCollented}}" catchtap='tapCollection' class='detail-share-keep' src='../../../images/article/article-detail-fenxiang.jpg'></image>
+    <image wx:else catchtap='tapCollection' class='detail-share-keep' src='../../../images/article/article-detail-fenxiang-none.jpg'></image>
+    <image class='detail-share-sharing' src='../../../images/article/article-detail-shoucang.jpg'></image>
+    <view class='detail-share-line'></view>
+  </view>
+  <view class='detail-content'>
+    <text>{{content}}</text>
+  </view>
+</view>

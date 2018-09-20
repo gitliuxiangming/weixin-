@@ -1,6 +1,6 @@
 <view class='container'>
   <view class='userinfo'>
-    <image class='userinfo-avatar' src='/images/avatar/tou像.jpg'></image>
+    <image class='userinfo-avatar' src='/images/avatar/touxiang1.jpg'></image>
     <text class='userinfo-name'>lbb</text>
   </view>
   <view class='notto' bindtap="tapMotto">
