@@ -1,0 +1,12 @@
+.star-box image{
+  width: 22rpx;
+  height:22rpx;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+.star-box .score{
+  color:#666;
+  font-size: 28rpx;
+  margin-left: 8px;
+  vertical-align: middle;
+}
