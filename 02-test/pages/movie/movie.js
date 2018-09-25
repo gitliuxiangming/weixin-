@@ -1,5 +1,5 @@
 // pages/movie/movie.js
-var { coverStarsToArray } = require('../../utils/utils.js')
+var { getMovieListData } = require('../../utils/utils.js')
 var app =getApp();
 Page({
 
@@ -19,22 +19,25 @@ Page({
     var inTheatersUrl = baseUrl +'/v2/movie/in_theaters?start=0&count=3';
     var comingSoonUrl = baseUrl + '/v2/movie/coming_soon?start=0&count=3';
     var top250Url = baseUrl + '/v2/movie/top250?start=0&count=3';
-    this.getData(inTheatersUrl,function(data){
-      _this.setData({
+    getMovieListData(inTheatersUrl,function(data){
+        _this.setData({
         inTheatersData:data,
-        inTheatersTag:'正在热映'
+        inTheatersTag:'正在热映',
+        inTheatersTagType:' inTheaters'
       })
     });
-    this.getData(comingSoonUrl, function (data) {
+    getMovieListData(comingSoonUrl, function (data) {
       _this.setData({
         comingSoonData: data,
-        comingSoonTag: '即将上映'
+        comingSoonTag: '即将上映',
+        comingSoonTagType: ' comingSoon'
       })
     });
-    this.getData(top250Url, function (data) {
+    getMovieListData(top250Url, function (data) {
       _this.setData({
         top250Data: data,
-        top250Tag: '豆瓣Top250'
+        top250Tag: '豆瓣Top250',
+        top250TagType: ' top250'
       })
     });
   },
@@ -50,17 +53,15 @@ Page({
       }
     })
   },
-  formatData:function(data){
-    var arr=[];
-    for (var i = 0; i < data.subjects.length;i++){
-      arr.push({
-        coverImgUrl: data.subjects[i].images.large,
-        title: data.subjects[i].title,
-        stars:coverStarsToArray(data.subjects[i].rating.stars),
-        score: data.subjects[i].rating.average
-      })
-    }
-    return arr;
-  },
+  /**
+   * 处理点击更多
+   */
+  tapmore:function(event){
+    var tag = event.currentTarget.dataset.tagType;
+    // console.log(tag)
+    wx.navigateTo({
+      url: 'movie-more/movie-more?tag = navigateTo',
+    })
+  }
 
 })
